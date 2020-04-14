@@ -5,6 +5,8 @@ import isp.lab2.student.Product;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -15,10 +17,13 @@ public class Main {
         Product book2 = new PaperbackBook("A Wrinkle in Time", "9780312367541", 6.19, 4, LocalDate.of(2007, Month.MAY, 1), "Madeleine L'Engle", 256);
         Product record = new VinylRecord("Kind of Blue", 13.54, 18, LocalDate.of(2011, Month.APRIL, 12), "Miles Davis", Duration.ofMinutes(46));
 
-        System.out.println(book1.toString());
-        System.out.println("\n");
-        System.out.println(book2.toString());
-        System.out.println("\n");
-        System.out.println(record.toString());
+        List<Product> list = new ArrayList<>();
+        list.add(book1);
+        list.add(book2);
+        list.add(record);
+
+        for (Product p : list){
+            System.out.println(p.toString() + "\n");
+        }
     }
 }
