@@ -1,8 +1,13 @@
-package isp.lab1;
+package isp.lab1.student;
 
+import java.time.Duration;
 import java.time.LocalDate;
 
-public interface Product {
+public interface Album {
+
+    public String getArtist();
+
+    public Duration getPlayingTime();
 
     public double getCost();
 
@@ -15,5 +20,4 @@ public interface Product {
     public String getTitle();
 
     public void order(int quantity);
-
 }

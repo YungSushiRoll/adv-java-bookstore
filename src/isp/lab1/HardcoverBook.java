@@ -1,10 +1,11 @@
 package isp.lab1;
 
-import java.time.Duration;
+import isp.lab1.student.Book;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class HardcoverBook implements Product {
+public class HardcoverBook implements Book {
 
     private String title;
     private String isbn;
@@ -25,23 +26,8 @@ public class HardcoverBook implements Product {
     }
 
     @Override
-    public String getArtist() {
-        return "";
-    }
-
-    @Override
     public String getAuthor() {
         return author;
-    }
-
-    @Override
-    public double getCost() {
-        return cost;
-    }
-
-    @Override
-    public String getFormattedReleaseDate() {
-        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 
     @Override
@@ -55,8 +41,13 @@ public class HardcoverBook implements Product {
     }
 
     @Override
-    public Duration getPlayingTime() {
-        return null;
+    public double getCost() {
+        return cost;
+    }
+
+    @Override
+    public String getFormattedReleaseDate() {
+        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 
     @Override

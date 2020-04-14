@@ -1,4 +1,4 @@
-package isp.lab1;
+package isp.lab2.student;
 
 import java.time.LocalDate;
 
@@ -15,5 +15,4 @@ public interface Product {
     public String getTitle();
 
     public void order(int quantity);
-
 }

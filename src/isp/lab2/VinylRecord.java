@@ -1,6 +1,6 @@
-package isp.lab1;
+package isp.lab2;
 
-import isp.lab1.student.Album;
+import isp.lab2.student.Album;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -27,17 +27,6 @@ public class VinylRecord implements Album {
         this.playingTime = playingTime;
     }
 
-
-    @Override
-    public String getArtist() {
-        return artist;
-    }
-
-    @Override
-    public double getCost() {
-        return cost;
-    }
-
     private String getFormattedPlayingTime() {
         long seconds = playingTime.getSeconds();
         return String.format(
@@ -47,13 +36,23 @@ public class VinylRecord implements Album {
     }
 
     @Override
-    public String getFormattedReleaseDate() {
-        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+    public String getArtist() {
+        return artist;
     }
 
     @Override
     public Duration getPlayingTime() {
         return playingTime;
+    }
+
+    @Override
+    public double getCost() {
+        return cost;
+    }
+
+    @Override
+    public String getFormattedReleaseDate() {
+        return releaseDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     }
 
     @Override

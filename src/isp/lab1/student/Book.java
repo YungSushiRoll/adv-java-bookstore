@@ -1,8 +1,14 @@
-package isp.lab1;
+package isp.lab1.student;
 
 import java.time.LocalDate;
 
-public interface Product {
+public interface Book {
+
+    public String getAuthor();
+
+    public String getISBN();
+
+    public int getPages();
 
     public double getCost();
 
@@ -15,5 +21,4 @@ public interface Product {
     public String getTitle();
 
     public void order(int quantity);
-
 }
